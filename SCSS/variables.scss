@@ -3,11 +3,12 @@
 @import 'https://fonts.googleapis.com/icon?family=Material+Icons';
 @import 'https://fonts.googleapis.com/css?family=Lato:300,400,700&display=swap';
 
+// breakpoints for responsive design
 $mobile-tablet: 760px;
 $tablet-desktop: 1024px;
 
+// variables for fonts and background colors;
 $background: #e5e5e5;
-
 $brand-font: 'Permanent Marker';
 $brand-font-size: 1.5rem;
 $brand-font-color: lighten(#000000, 30%);
@@ -17,12 +18,11 @@ $regular: 400;
 $light: 300;
 $primaryText: #4f4f4f;
 $secondaryText: #898989;
-
 $post-preview-title-font-size: 1.3rem;
 $post-preview-details-font-size: 0.8rem;
 $post-preview-snippets-font-size: 1rem;
 
-
+// variables to style navbar and slidenav
 $navbar-top-background: #ffffff;
 $navbar-item-background: $navbar-top-background;
 $navbar-item-background-opacity: 0.9;
@@ -30,7 +30,3 @@ $navbar-link-color: #000000;
 $nav-width: 20rem;
 $nav-padding: 0.875rem 0.6rem;
 $nav-top-line-height: 4rem;
-
-
-$font-size-1: 1.5rem;
-$font-size-2: 0.8rem;
