@@ -30,7 +30,10 @@ html, body{
   .brand{
     font-family: $brand-font;
     font-size: $brand-font-size;
-    color: $brand-font-color;
+		a{
+			color: $brand-font-color;
+			text-decoration: none;
+		}
   }
 	
 	.hamburger {
@@ -101,83 +104,109 @@ html, body{
 		"sidebar";
 
 	.sidebar-left{
-		border-radius: 0.4rem;
-		border: 1px groove rgba(0,0,0,0.15);
 		grid-area: sidebar;
-		background-color: $navbar-top-background;
 
-		.profile-img{
-			width: 55%;;
-			display: block;
-			margin : 1.5rem auto;
-		}
-
-		.headline{
-			font-family: $primary-font;
-			font-weight: $bold;
+		.sidebar {
 			padding: 0rem 2rem;
-		}
+			border-radius: 0.4rem;
+			border: 1px groove rgba(0,0,0,0.15);
+			background-color: $navbar-top-background;
 
-		hr{
-			margin-left: 2rem;
-			width: 4rem;
-			color: rgba(0,0,0,0.3);
-		}
-
-		.featured-link{
-			padding: 0rem 2rem;
-			
-			a{
-				text-decoration: none;
-				color: $secondaryText;
-				font-family: $primary-font;
-				font-weight: $light;
-
-				&:hover{
-					color: $primaryText;
-				}
+			.profile-img{
+				width: 55%;;
+				display: block;
+				margin : 1.5rem auto;
 			}
-		}
 
-		.social-icons{
-			list-style: none;
-			padding: 0;
+			.headline{
+				font-family: $primary-font;
+				font-weight: $bold;
+			}
 
-			li{
-				&:first-child{
-					padding-left: 2rem;
-				}
-				padding-left: 0.5rem;
-				float: left;
+			.featured-link{
+				
 				a{
+					text-decoration: none;
 					color: $secondaryText;
-					font-size: 1.6rem;
+					font-family: $primary-font;
+					font-weight: $light;
+
 					&:hover{
 						color: $primaryText;
 					}
 				}
 			}
-		}
 
-		.built-with{
-			padding: 0rem 2rem;
-			color: $secondaryText;
-			font-family: $primary-font;
-			font-weight: $light;
-			font-size: 0.7rem;
+			.social-icons{
+				list-style: none;
+				padding: 0;
+
+				li{
+					&:first-child{
+					}
+					padding-left: 0.5rem;
+					float: left;
+					a{
+						color: $secondaryText;
+						font-size: 1.6rem;
+						&:hover{
+							color: $primaryText;
+						}
+					}
+				}
+			}
+
+			.built-with{
+				color: $secondaryText;
+				font-family: $primary-font;
+				font-weight: $light;
+				font-size: 0.7rem;
+			}
 		}
 	}
 
 	.content{
 		grid-area: content;
-	}
 
-	.more-posts-link{
-		font-family: $primary-font;
-		text-decoration: none;
-		margin: 1.5rem 0rem;
-		padding: 0.6rem 2rem;
-		background-color: rgba(255, 147, 147, 0.7);
+		.breadcrumb{
+			width: 100%;
+			background-color: $navbar-top-background;
+			border-radius: 0.4rem;
+			border: 1px groove rgba(0,0,0,0.15);
+			margin-bottom: 1.5rem;
+			padding: 1rem;
+			text-transform: uppercase;
+			font-family: $primary-font;
+			font-size: $breadcrumb-font-size;
+			font-weight: $light;
+			color: $secondaryText;
+			a{
+				text-decoration: none;
+				color: $secondaryText;
+			}
+		}
+
+		.content-box{
+			width: 100%;
+			background-color: $navbar-top-background;
+			border-radius: 0.4rem;
+			border: 1px groove rgba(0,0,0,0.15);
+			margin-bottom: 1.5rem;
+			padding: 1rem;
+
+			.featured-img{
+				margin: -1rem;
+				border-top-left-radius: 0.5rem;
+				border-top-right-radius: 0.5rem;
+				overflow: hidden;
+				margin-bottom: 1rem;
+				img{
+					width: 100%;
+					height: 20rem;
+					object-fit: cover;
+				}
+			}
+		}
 	}
 }
 
@@ -210,7 +239,14 @@ html, body{
 			margin-bottom: 0.5rem;
 			font-family: $primary-font;
 			font-weight: $bold;
-			font-size: $post-preview-title-font-size
+			font-size: $post-preview-title-font-size;
+			a{
+				text-decoration: none;
+				color: $primaryText;
+				&:hover{
+					color: $secondaryText;
+				}
+			}
 		}
 
 		.post-details{
@@ -236,6 +272,106 @@ html, body{
 	}
 }
 
+//stylesheet for text
+.heading, .sub-heading, .body-text, .button{
+	font-family: $primary-font;
+	color: $primaryText;
+}
+
+.heading{
+	font-size: $heading-font-size;
+	margin: 0rem;
+	font-weight: $bold;
+}
+
+.sub-heading{
+	font-size: $subheading-font-size;
+	margin: 0rem;
+	font-weight: $regular;
+}
+
+.body-text{
+	font-size: $body-text-font-size;
+	color: $secondaryText;
+	font-weight: $light;
+}
+
+.publication-details{
+	text-transform: uppercase;
+	font-family: $primary-font;
+	font-weight: $light;
+	font-size: 0.8rem;
+}
+
+
+hr{
+	margin-left: 0rem;
+	width: 4rem;
+	color: rgba(0,0,0,0.3);
+}
+
+.button{
+	margin: 2rem 0rem;
+	a{
+		padding: 0.5rem 1rem;
+		background-color: $button-background-color;
+		color: $button-text-color;
+		text-decoration: none;
+	}
+}
+
+button{
+	padding: 0.5rem 1rem;
+	border: none;
+	font-size: 1rem;
+	color: $button-text-color;
+	background-color: $button-background-color;
+}
+
+blockquote{
+	font-family: $blockquote-font;
+	font-size: $blockquote-font-size;
+	color: $secondaryText;
+	border-left: 0.5rem solid $secondaryText;
+	padding-left:1rem;
+}
+
+ul{
+	font-family: $primary-font;
+	color: $secondaryText;
+	font-size: $body-text-font-size;
+	font-weight: $light;
+	padding-left: 3.5rem;
+}
+
+.form {
+	.form-controls{
+		width: 100%;
+		margin-bottom: 1rem;
+
+		.label{
+			font-family: $primary-font;
+			font-size: $form-label-font-size;
+			color: $primaryText;
+			margin: 0 0 0.5rem 0;
+		}
+
+		.form-control{
+			width: 100%;
+			padding: 0.5rem;
+			font-size: $input-box-font-size;
+		}
+
+		.textarea{
+			width: 100%;
+			height: 10rem;
+			font-family: $primary-font;
+			padding: 0.5rem;
+			font-size: $input-box-font-size;
+		}
+	}
+}
+
 
 
 // media queries for responsive stylesheet
@@ -252,6 +388,14 @@ html, body{
 	.content{
 		margin-top: 1.5rem;
 	}
+
+	.heading{
+		font-size: $heading-font-size-mobile;
+	}
+
+	.sub-heading{
+		font-size: $subheading-font-size-mobile;
+	}
 }
 
 //for tablet
@@ -262,8 +406,10 @@ html, body{
 		grid-template-columns:2fr 5fr;
 		grid-template-areas: 'sidebar content';
 
-		.sidebar-left{
-			max-height: 45rem;
+		.content{
+			.breadcrumb, .content-box{
+				margin-bottom: 1rem !important;
+			}
 		}
 	}
   .wrapper{
@@ -292,10 +438,6 @@ html, body{
 		grid-template-columns: 2fr 7fr;
 		grid-template-areas:
 		"sidebar content";
-
-		.sidebar-left{
-			max-height: 40rem;
-		}
  }
   .wrapper{
 		width: 1024px;
