@@ -143,6 +143,7 @@ html, body{
 
 				li{
 					&:first-child{
+						padding-left: 0rem;
 					}
 					padding-left: 0.5rem;
 					float: left;
@@ -336,7 +337,7 @@ blockquote{
 	padding-left:1rem;
 }
 
-ul{
+.ul{
 	font-family: $primary-font;
 	color: $secondaryText;
 	font-size: $body-text-font-size;
